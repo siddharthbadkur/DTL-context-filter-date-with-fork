@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Nested dict data</h1>
+    <h3>{{student}}</h3>
+    <br />
+    <h3>{{student.stu1}}</h3>
+    <br />
+    <h3>{{student.stu1.name}}</h3>
+    <br />
+    <h3>{{student.stu1.edu}}</h3>
+    <br />
+    <h3>{{student.stu1.city}}</h3>
+    </center>
+    <center>
+        <h1>Fetch key abd value both</h1>
+        {% for k,v in student.items %}
+        {{k}} = {{v}}<br />
+        {% endfor %}
+    </center>
+
+    <center>
+        <h1>Fetch key abd value both</h1>
+        {% for k in student.keys %}
+        {{k}}<br />
+        {% endfor %}
+    </center>
+
+    <center>
+        <h1>Fetch key abd value both</h1>
+        {% for k in student.values %}
+        {{k}}<br />
+        {% endfor %}
+    </center>
+
+    <center>
+        <h1>Fetch key abd value both</h1>
+        {% for key,value in student.stu1.items %}
+        {{key}} = {{value}}<br />
+        {% endfor %}
+    </center>
+    <center>
+        <h1>Fetch only keys </h1>
+        {% for key in student.keys %}
+        {{key}}<br />
+        {% endfor %}
+    </center>
+    <center>
+        <h1>Fetch only keys </h1>
+        {% for key in student.stu1.keys %}
+        {{key}}<br />
+        {% endfor %}
+    </center>
+    <center>
+        <h1>Fetch only Values </h1>
+        {% for key in student.values %}
+        {{key}}<br />
+        {% endfor %}
+    </center>
+    <center>
+        <h1>Fetch only values </h1>
+        {% for key in student.stu1.values %}
+        {{key}}<br />
+        {% endfor %}
+    </center>
+    
+</body>
+</html>
